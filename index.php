@@ -1,19 +1,22 @@
 <?php
 
-define('VG_ACCESS',true);
-
-header('Content-Type:text/html;charset=utf-8');
+define('VG_ACCESS', true);
+header('Content-Type:text/html;charset=itf-8');
 session_start();
 
-require_once ('config.php');
-require_once ('core/base/setings/internal_seting.php');
+require_once  'config.php';
+require_once  'core/base/settings/internal_settings.php';
 
-use core\base\exceptions\RouteException;
+use core\base\exception\RouteException;
 use core\base\controllers\RouteController;
 
-try{
-    RouteController::getInstance()->route();
+
+
+try {
+    RouteController::getInstance();
+
 }
-catch(RouteException $e){
-    exit ($e->getMessage());
+catch (RouteException $e){
+    exit($e->getMessage());
 }
+

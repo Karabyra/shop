@@ -1,7 +1,7 @@
 <?php
 
 
-namespace core\base\exceptions;
+namespace core\base\exception;
 
 
 class RouteException extends \Exception
