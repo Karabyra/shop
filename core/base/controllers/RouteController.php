@@ -25,8 +25,8 @@ class RouteController
 
     private function __construct()
     {
-        $a = Settings::get('routes');
-        $b = ShopSettings::get('routes');
+        $a1 = Settings::instance();
+        $b1 = ShopSettings::instance();
         exit();
     }
 }
