@@ -10,18 +10,15 @@ class ShopSettings
     static private $_instance;
     private $baseSettings;
 
-    private $routes=[
+    private $routes = [
         'admin' => [
             'name' => 'sudo',
         ],
-        'vasya' => [
-            'name' => 'vasya'
-        ]
     ];
 
     private $templateArr = [
-        'text' => ['price','short'],
-        'textarea'=>['goods_content']
+        'text' => ['price', 'short'],
+        'textarea' => ['goods_content']
     ];
 
     private function __construct()
@@ -32,10 +29,12 @@ class ShopSettings
     {
     }
 
-    static public function get ($property){
+    static public function get($property)
+    {
         return self::instance()->$property;
     }
-    static public function  instance()
+
+    static public function instance()
     {
         if (self::$_instance instanceof self) {
             return self::$_instance;
@@ -47,10 +46,12 @@ class ShopSettings
 
         return self::$_instance;
     }
-    protected function setProperty($properties){
-        if($properties){
-            foreach ($properties as $name => $property){
-                $this->$name= $property;
+
+    protected function setProperty($properties)
+    {
+        if ($properties) {
+            foreach ($properties as $name => $property) {
+                $this->$name = $property;
             }
         }
     }
