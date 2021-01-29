@@ -11,9 +11,11 @@ class ShopSettings
     private $baseSettings;
 
     private $routes = [
-        'admin' => [
-            'name' => 'sudo',
-        ],
+        'plugins' => [
+            'path' => 'core/plugins',
+            'hrUrl' => false,
+            'dir'=> 'controller'
+        ]
     ];
 
     private $templateArr = [

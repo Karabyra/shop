@@ -12,7 +12,7 @@ class Settings
     private $routes = [
         'admin' => [
             'alias' => 'admin',
-            'path' => 'core/admin/controllers/',
+            'path' => 'core/admin/controller/',
             'hrUrl' => false
         ],
         'settings' => [
@@ -20,10 +20,11 @@ class Settings
         ],
         'plugins' => [
             'path' => 'core/plugins',
-            'hrUrl' => false
+            'hrUrl' => false,
+            'dir'=> false
         ],
         'user' => [
-            'path' => 'core/user/controllers',
+            'path' => 'core/user/controller/',
             'hrUrl' => true,
             'routes' => [
 
